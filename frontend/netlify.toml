@@ -1,4 +1,9 @@
 [build]
-base = "frontend"
-publish = "frontend"
-command = ""
+  base = "frontend"
+  publish = "frontend"
+  command = ""
+
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
