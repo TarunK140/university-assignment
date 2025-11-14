@@ -1,0 +1,27 @@
+{
+  "id": "uni2",
+  "name": "Riverview Institute of Technology",
+  "overview": "Riverview Institute focuses on industry-ready technical education with modern labs, innovation centers and global placements.",
+  "courses": [
+    {
+      "code": "BECS",
+      "name": "B.E Computer Science",
+      "duration": "4 years",
+      "fees_min": 80000,
+      "fees_max": 150000
+    },
+    {
+      "code": "BTechAI",
+      "name": "B.Tech Artificial Intelligence & Machine Learning",
+      "duration": "4 years",
+      "fees_min": 100000,
+      "fees_max": 200000
+    }
+  ],
+  "placements": {
+    "highest": 3500000,
+    "average": 850000,
+    "top_recruiters": ["Google", "Flipkart", "Microsoft", "Cognizant"]
+  },
+  "facilities": ["AI Lab", "Innovation Centre", "Hostel", "Internship Cell"]
+}

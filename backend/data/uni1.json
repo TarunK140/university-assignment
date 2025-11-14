@@ -1,0 +1,34 @@
+{
+  "id": "uni1",
+  "name": "Starlight Private University",
+  "overview": "Starlight Private University (SPU) is a multidisciplinary private university known for technology, management and applied sciences.",
+  "courses": [
+    {
+      "code": "BScCS",
+      "name": "B.Sc Computer Science",
+      "duration": "3 years",
+      "fees_min": 60000,
+      "fees_max": 120000
+    },
+    {
+      "code": "BBA",
+      "name": "Bachelor of Business Administration",
+      "duration": "3 years",
+      "fees_min": 50000,
+      "fees_max": 90000
+    },
+    {
+      "code": "MCA",
+      "name": "Master of Computer Applications",
+      "duration": "2 years",
+      "fees_min": 90000,
+      "fees_max": 150000
+    }
+  ],
+  "placements": {
+    "highest": 2200000,
+    "average": 600000,
+    "top_recruiters": ["TCS", "Infosys", "Accenture", "Amazon"]
+  },
+  "facilities": ["Hostel", "Library", "Sports Complex", "Labs", "Cafeteria"]
+}

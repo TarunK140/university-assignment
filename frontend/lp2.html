@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riverview Institute of Technology - Admissions 2025</title>
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <style>
+    /* Hero Banner */
+    .hero {
+      background: url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b")
+        center/cover no-repeat;
+      height: 260px;
+      border-radius: 14px;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-shadow: 0px 4px 10px rgba(0,0,0,0.6);
+    }
+    .hero h1 {
+      font-size: 38px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HERO -->
+    <div class="hero">
+      <h1>Riverview Institute of Technology</h1>
+    </div>
+
+    <!-- HEADER WITH CTA BUTTONS -->
+    <div class="header" style="margin-bottom:40px;">
+      <h1 style="font-size:24px; color:#1a237e;">Admissions Open 2025</h1>
+
+      <a href="lp1.html" class="secondary">Go to Starlight University</a>
+      <button class="secondary fees-btn" data-uni="uni2">Check Fees</button>
+      <a href="assets/brochure/brochure.pdf" download class="secondary">Download Brochure</a>
+    </div>
+
+    <!-- GRID LAYOUT -->
+    <div class="grid">
+
+      <!-- LEFT SECTION -->
+      <div>
+
+        <div class="section">
+          <h2>Overview</h2>
+          <p class="small">
+            Riverview Institute focuses on industry-ready technical education,
+            preparing students for engineering, AI, and cutting-edge research.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>Top Courses</h2>
+          <ul>
+            <li>B.E Computer Science</li>
+            <li>B.Tech Artificial Intelligence & Machine Learning</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>Placements</h2>
+          <p class="small">
+            🎯 Highest Package: ₹35,00,000<br>
+            ⭐ Average Package: ₹8,50,000<br>
+            🏢 Top Recruiters: Google, Flipkart, Microsoft, Cognizant
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>Facilities</h2>
+          <p class="small">
+            AI Lab, Innovation Centre, Hostel, Internship Cell
+          </p>
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE FORM -->
+      <aside>
+
+        <h3>Apply Now</h3>
+
+        <input type="hidden" id="pd-endpoint" value="https://example.pipedream.net/">
+
+        <form id="lead-form">
+          <input name="fullName" placeholder="Full Name" required>
+          <input name="email" type="email" placeholder="Email ID" required>
+          <input name="phone" type="tel" placeholder="Phone Number" required>
+          <input name="state" placeholder="State">
+
+          <select name="course" required>
+            <option value="">Select Course</option>
+            <option value="BECS">B.E Computer Science</option>
+            <option value="BTechAI">B.Tech AI & ML</option>
+          </select>
+
+          <select name="intake" required>
+            <option value="">Select Intake</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+          </select>
+
+          <label style="font-size:13px;">
+            <input type="checkbox" name="consent" required>
+            I agree to receive communication from the university.
+          </label>
+
+          <button type="submit">Submit Application</button>
+        </form>
+
+        <div id="form-toast" class="toast"></div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div id="modal-backdrop" class="modal-backdrop">
+    <div id="modal-content" class="modal"></div>
+  </div>
+
+  <!-- MAIN JS -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
