@@ -104,23 +104,25 @@ Version Control  	Git, GitHub
 ----------------------------------------------------------------------------------------------------------
 ## 📁 Project Structure
 
+```
 university-assignment/
-│
-├── backend/ # Mock API server (Express.js)
-│ ├── server.js
-│ ├── data/
-│ └── routes/
+├── backend/               # Mock API server (Express.js)
+│   ├── server.js
+│   ├── data/
+│   └── routes/
 │
 ├── frontend/
-│ ├── index.html # LP1
-│ ├── lp2.html # LP2
-│ ├── assets/
-│ ├── css/styles.css
-│ ├── js/main.js
-│ └── brochure/ # PDF brochures
+│   ├── index.html         # LP1
+│   ├── lp2.html           # LP2
+│   ├── assets/
+│   ├── css/styles.css
+│   └── js/main.js
 │
-├── netlify.toml # Deploy config
+├── brochure/              # PDF brochures
+├── netlify.toml           # Deploy config
 └── README.md
+```
+
 
 ----------------------------------------------------------------------------------------
 ⚙️ How to Run Locally
