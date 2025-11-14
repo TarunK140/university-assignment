@@ -3,16 +3,19 @@
 This project is a full-stack mini-assignment designed for a Technical Business Analyst / Web Developer evaluation.
 It includes two fully responsive landing pages, a lead submission system, mock APIs, and full Netlify deployment.
 
+-------------------------------------------------------------------------------------------------------------
+
 🚀 Live Demo (Netlify Deployment)
 
 🔗 https://edu-admissions-lp.netlify.app
 
 Both landing pages (LP-1 & LP-2) can be accessed directly from here.
+-----------------------------------------------------------------------------------------------------------
 
 📂 GitHub Repository
 
 🔗 https://github.com/TarunK140/university-assignment
-
+-----------------------------------------------------------------------------------------------------------
 📌 Project Features
 🎨 1. Two Fully Designed Landing Pages
 
@@ -28,99 +31,115 @@ Courses offered
 
 Facilities
 
-Placement highlights
+* Placement highlights
 
-Modal pop-up for course-wise fee structure
+* Modal pop-up for course-wise fee structure
 
-Downloadable professional brochure
+* Downloadable professional brochure
 
-Navigation between universities
-
+* Navigation between universities
+------------------------------------------------------------------------------------------------------------
 📝 2. Lead Form With API Integration
 
 Each landing page contains a lead form with:
 
-Full Name
+* Full Name
 
-Email
+* Email
 
-Phone Number
+* Phone Number
 
-State
+* State
 
-Course Interested
+* Course Interested
 
-Intake Year
+* Intake Year
 
-Consent Checkbox
+* Consent Checkbox
 
 ✔ Submits data to a Pipedream endpoint
 ✔ Displays success/error message without reload
-
+------------------------------------------------------------------------------------------------------------
 💻 3. Backend API (For Development Mode Only)
 
 A simple Express.js backend serves JSON data during local development.
 
 API Endpoints
-GET /api/university/:id
-GET /api/university/:id/fees
 
+GET /api/university/:id
+
+GET /api/university/:id/fees
 
 ⚠️ Netlify cannot call localhost APIs,
 so production uses a static JSON fallback inside main.js.
+-----------------------------------------------------------------------------------------------------------
+.
 
 🧩 4. Modern Frontend (UX-focused)
 
-Clean & polished UI
+* Clean & polished UI
 
-Glass-effect cards
+* Glass-effect cards
 
-Smooth modal animations
+* Smooth modal animations
 
-Fully mobile-responsive
+* Fully mobile-responsive
 
-Dark/Light theme toggle
+* Dark/Light theme toggle
 
-Optimized layout grid
+* Optimized layout grid
+----------------------------------------------------------------------------------------------------------
+  🛠️ Technologies Used
+Layer	       Tools
 
-🛠️ Technologies Used
-Layer	Tools
-Frontend	HTML, CSS, JavaScript
-Backend (Mock)	Node.js, Express.js
-Deployment	Netlify
-Automation	Pipedream
-Version Control	Git, GitHub
-📁 Project Folder Structure
+Frontend  	HTML, CSS, JavaScript
+
+Backend (Mock)  	Node.js, Express.js
+
+Deployment  	Netlify
+
+Automation	  Pipedream
+
+Version Control  	Git, GitHub
+----------------------------------------------------------------------------------------------------------
+## 📁 Project Structure
+
 university-assignment/
 │
-├── backend/                  # Mock API server (Express.js)
-│   ├── server.js
-│   ├── data/
-│   └── routes/
+├── backend/ # Mock API server (Express.js)
+│ ├── server.js
+│ ├── data/
+│ └── routes/
 │
-├── frontend/                 # Landing Pages (Netlify hosted)
-│   ├── index.html            # LP-1 (Starlight University)
-│   ├── lp2.html              # LP-2 (Riverview Tech University)
-│   ├── assets/
-│   │   ├── css/styles.css
-│   │   ├── js/main.js
-│   │   └── brochure/         # PDF brochures
+├── frontend/
+│ ├── index.html # LP1
+│ ├── lp2.html # LP2
+│ ├── assets/
+│ ├── css/styles.css
+│ ├── js/main.js
+│ └── brochure/ # PDF brochures
 │
-├── netlify.toml              # Deployment configuration
+├── netlify.toml # Deploy config
 └── README.md
 
+----------------------------------------------------------------------------------------
 ⚙️ How to Run Locally
+
 1️⃣ Clone the repository
+
 git clone https://github.com/TarunK140/university-assignment
+
 cd university-assignment
 
-2️⃣ Start the Backend
-cd backend
-npm install
-npm start
 
+2️⃣ Start the Backend
+
+-> cd backend
+
+-> npm install
 
 Backend runs at:
+
 👉 http://localhost:5000
 
 3️⃣ Open the Frontend
@@ -134,8 +153,8 @@ Option B — Manual
 
 Open:
 
-frontend/index.html
-
+  frontend/index.html
+  ---------------------------------------------------------------------------------------------------------
 🌐 Deployment (Netlify)
 
 Deployment is automatic via GitHub → Netlify build.
@@ -143,10 +162,12 @@ Deployment is automatic via GitHub → Netlify build.
 netlify.toml ensures the correct folder is deployed:
 
 [build]
-  base = "frontend"
-  publish = "frontend"
 
-📘 Brochure PDFs
+  base = "frontend"
+  
+  publish = "frontend"
+  ---------------------------------------------------------------------------------------------------------
+  📘 Brochure PDFs
 
 Each university has a professionally designed brochure with:
 
@@ -167,32 +188,39 @@ QR link
 Beautiful layout
 
 Stored at:
-
-frontend/assets/brochure/
-
-🏆 Challenges & Solutions
+  frontend/assets/brochure/
+  -------------------------------------------------------------------------------------------------------
+  🏆 Challenges & Solutions
+  
 1️⃣ Netlify couldn't call localhost API
 
 Problem: CORS + no backend in production
-Solution: Static JSON fallback inside main.js.
 
+Solution: Static JSON fallback inside main.js.
+----------------------------------------------------------------------------------------------------------
 2️⃣ LP-1 ↔ LP-2 navigation issue
 
 Problem: Wrong paths
-Solution: Correct → href="index.html" and href="lp2.html"
 
+Solution: Correct → href="index.html" and href="lp2.html"
+-----------------------------------------------------------------------------------------------------------
 3️⃣ Mobile responsiveness issues
 
 Problem: Buttons overflowing screen
-Solution: Grid + media queries + flex fixes
 
+Solution: Grid + media queries + flex fixes
+----------------------------------------------------------------------------------------------------------
 4️⃣ Fee modal not opening
 
 Problem: API failure
-Solution: Replaced with offline JSON fallback
 
+Solution: Replaced with offline JSON fallback
+-----------------------------------------------------------------------------------------------------------
 🙋‍♂️ Author
 
 Tarun Kumar
+
 MCA (AI & ML), Lovely Professional University
+
 Aspiring Data Analyst | Business Analyst | Frontend Developer
+---------------------------------------------------------------------------------------------------------
