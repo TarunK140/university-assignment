@@ -1,14 +1,13 @@
 🎓 University Admissions Landing Pages — Full Stack Mini Project
 
 This project is a full-stack mini-assignment designed for a Technical Business Analyst / Web Developer evaluation.
-It consists of two fully responsive university landing pages, a lead submission system,
-a mock backend API, and a full Netlify deployment.
+It includes two fully responsive landing pages, a lead submission system, mock APIs, and full Netlify deployment.
 
 🚀 Live Demo (Netlify Deployment)
 
 🔗 https://edu-admissions-lp.netlify.app
 
-Both landing pages (LP-1 & LP-2) can be accessed directly from the home page.
+Both landing pages (LP-1 & LP-2) can be accessed directly from here.
 
 📂 GitHub Repository
 
@@ -17,8 +16,9 @@ Both landing pages (LP-1 & LP-2) can be accessed directly from the home page.
 📌 Project Features
 🎨 1. Two Fully Designed Landing Pages
 
-LP-1(index.html) — Starlight University
-LP-2 — Riverview Tech University
+LP-1 (index.html) — Starlight University
+
+LP-2 (lp2.html) — Riverview Tech University
 
 Each page includes:
 
@@ -34,11 +34,11 @@ Modal pop-up for course-wise fee structure
 
 Downloadable professional brochure
 
-Navigation between both universities
+Navigation between universities
 
-📝 2. Lead Form with API Integration
+📝 2. Lead Form With API Integration
 
-Each landing page contains a lead capture form:
+Each landing page contains a lead form with:
 
 Full Name
 
@@ -54,34 +54,32 @@ Intake Year
 
 Consent Checkbox
 
-✔ Form submits data to a Pipedream endpoint
-✔ Displays success or error message without reloading the page
+✔ Submits data to a Pipedream endpoint
+✔ Displays success/error message without reload
 
-💻 3. Backend API (Mock for Development)
+💻 3. Backend API (For Development Mode Only)
 
-A simple Express.js API was used locally to provide JSON data during development:
+A simple Express.js backend serves JSON data during local development.
 
 API Endpoints
 GET /api/university/:id
 GET /api/university/:id/fees
 
 
-Note:
-Netlify cannot call localhost APIs, so a static JSON fallback is used on production.
+⚠️ Netlify cannot call localhost APIs,
+so production uses a static JSON fallback inside main.js.
 
-🧩 4. Modern Frontend with Smooth UI & UX
+🧩 4. Modern Frontend (UX-focused)
 
-Beautiful, polished UI
+Clean & polished UI
 
 Glass-effect cards
 
-Interactive modal animations
+Smooth modal animations
 
-Fully mobile-responsive design
+Fully mobile-responsive
 
 Dark/Light theme toggle
-
-Clean color palette
 
 Optimized layout grid
 
@@ -91,24 +89,24 @@ Frontend	HTML, CSS, JavaScript
 Backend (Mock)	Node.js, Express.js
 Deployment	Netlify
 Automation	Pipedream
-Version Control	Git & GitHub
+Version Control	Git, GitHub
 📁 Project Folder Structure
 university-assignment/
 │
-├── backend/              # Mock API server (Express.js)
+├── backend/                  # Mock API server (Express.js)
 │   ├── server.js
 │   ├── data/
 │   └── routes/
 │
-├── frontend/             # Landing pages (Netlify hosted)
-│   ├── index.html        # LP-1 (Starlight University)
-│   ├── lp2.html          # LP-2 (Riverview Tech University)
+├── frontend/                 # Landing Pages (Netlify hosted)
+│   ├── index.html            # LP-1 (Starlight University)
+│   ├── lp2.html              # LP-2 (Riverview Tech University)
 │   ├── assets/
 │   │   ├── css/styles.css
 │   │   ├── js/main.js
-│   │   └── brochure/     # PDF brochures
+│   │   └── brochure/         # PDF brochures
 │
-├── netlify.toml          # Deployment configuration
+├── netlify.toml              # Deployment configuration
 └── README.md
 
 ⚙️ How to Run Locally
@@ -116,36 +114,33 @@ university-assignment/
 git clone https://github.com/TarunK140/university-assignment
 cd university-assignment
 
-2️⃣ Start the backend
+2️⃣ Start the Backend
 cd backend
 npm install
 npm start
 
 
-Backend will run on:
+Backend runs at:
+👉 http://localhost:5000
 
-http://localhost:5000
+3️⃣ Open the Frontend
+Option A — Live Server (Recommended)
 
-3️⃣ Open the frontend
-
-Using VS Code:
+Open project in VS Code
 
 Right-click → Open With Live Server
 
+Option B — Manual
 
-Or open index.html manually in the browser.
+Open:
+
+frontend/index.html
 
 🌐 Deployment (Netlify)
 
-Deployment is fully automated:
+Deployment is automatic via GitHub → Netlify build.
 
-Push code to GitHub
-
-Netlify detects changes
-
-Auto-build + auto-deploy
-
-The deployment configuration (netlify.toml) ensures Netlify serves the correct folder:
+netlify.toml ensures the correct folder is deployed:
 
 [build]
   base = "frontend"
@@ -153,49 +148,51 @@ The deployment configuration (netlify.toml) ensures Netlify serves the correct f
 
 📘 Brochure PDFs
 
-Each university has a custom professional brochure including:
+Each university has a professionally designed brochure with:
 
 University logo
 
-Photo sections (classrooms, labs, library, hostel)
+Campus and classroom photos
 
 Courses
 
-Fee structure
-
 Facilities
 
-Placement stats
+Fee structure
 
-QR linking to landing page
+Placement statistics
+
+QR link
+
+Beautiful layout
 
 Stored at:
 
 frontend/assets/brochure/
 
 🏆 Challenges & Solutions
-1️⃣ API not loading on Netlify (CORS + localhost issue)
+1️⃣ Netlify couldn't call localhost API
 
-Netlify cannot fetch APIs running on localhost.
-✔ Solution: Used static JSON fallback inside main.js.
+Problem: CORS + no backend in production
+Solution: Static JSON fallback inside main.js.
 
-2️⃣ Navigation issues between LP-1 & LP-2
+2️⃣ LP-1 ↔ LP-2 navigation issue
 
-Links were breaking due to folder path differences.
-✔ Solution: Corrected paths to index.html and lp2.html.
+Problem: Wrong paths
+Solution: Correct → href="index.html" and href="lp2.html"
 
 3️⃣ Mobile responsiveness issues
 
-Buttons were overflowing the screen.
-✔ Solution: Refined grid + added media queries.
+Problem: Buttons overflowing screen
+Solution: Grid + media queries + flex fixes
 
 4️⃣ Fee modal not opening
 
-Caused by missing API response.
-✔ Solution: Replaced with offline JavaScript data.
+Problem: API failure
+Solution: Replaced with offline JSON fallback
 
 🙋‍♂️ Author
 
 Tarun Kumar
-MCA (AI & ML) — Lovely Professional University
-Aspiring Data Analyst / Business Analyst / Frontend Engineer
+MCA (AI & ML), Lovely Professional University
+Aspiring Data Analyst | Business Analyst | Frontend Developer
