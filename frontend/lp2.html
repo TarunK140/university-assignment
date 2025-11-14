@@ -8,25 +8,7 @@
   <!-- MAIN CSS -->
   <link rel="stylesheet" href="assets/css/styles.css">
 
-  <style>
-    /* Hero Banner */
-    .hero {
-      background: url("https://images.unsplash.com/photo-1503676260728-1c00da094a0b")
-        center/cover no-repeat;
-      height: 260px;
-      border-radius: 14px;
-      margin-bottom: 25px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-shadow: 0px 4px 10px rgba(0,0,0,0.6);
-    }
-    .hero h1 {
-      font-size: 38px;
-      font-weight: 700;
-    }
-  </style>
+
 </head>
 
 <body>
@@ -34,15 +16,16 @@
   <div class="container">
 
     <!-- HERO -->
-    <div class="hero">
+    <div class="hero" style="background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b');">
       <h1>Riverview Institute of Technology</h1>
-    </div>
+</div>
+
 
     <!-- HEADER WITH CTA BUTTONS -->
     <div class="header" style="margin-bottom:40px;">
       <h1 style="font-size:24px; color:#1a237e;">Admissions Open 2025</h1>
 
-      <a href="lp1.html" class="secondary">Go to Starlight University</a>
+      <a href="index.html" class="secondary">Go to Starlight University</a>
       <button class="secondary fees-btn" data-uni="uni2">Check Fees</button>
       <a href="assets/brochure/brochure.pdf" download class="secondary">Download Brochure</a>
     </div>
@@ -132,7 +115,8 @@
   </div>
 
   <!-- MAIN JS -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" defer></script>
+
 
 </body>
 </html>

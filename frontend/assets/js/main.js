@@ -12,27 +12,47 @@ async function fetchUniversity(id) {
   }
 }
 
+// ---------- STATIC FEES DATA (WORKS ON NETLIFY) ----------
+const feeData = {
+  uni1: [
+    { name: "B.Sc Computer Science", fees_min: "80,000", fees_max: "1,20,000" },
+    { name: "BBA", fees_min: "90,000", fees_max: "1,50,000" },
+    { name: "MCA", fees_min: "1,00,000", fees_max: "1,80,000" }
+  ],
+
+  uni2: [
+    { name: "B.E Computer Science", fees_min: "1,20,000", fees_max: "2,00,000" },
+    { name: "B.Tech AI & ML", fees_min: "1,50,000", fees_max: "2,50,000" }
+  ]
+};
+
 // ------------ FEES MODAL HANDLING ------------
+// ------------ FEES MODAL HANDLING (polished) ------------
 document.querySelectorAll(".fees-btn").forEach(btn => {
-  btn.addEventListener("click", async () => {
-    const uniId = btn.dataset.uni;
-
-    const response = await fetch(`http://localhost:5000/api/university/${uniId}/fees`);
-    const data = await response.json();
-
-    if (!data) return alert("Error loading fees!");
+  btn.addEventListener("click", () => {
+    const uniKey = btn.dataset.uni;
+    const data = feeData[uniKey] || [];
 
     modalContent.innerHTML = `
-      <h3>Fee Structure</h3>
-      ${data.map(course => `
-        <p><b>${course.name}</b>: ₹${course.fees_min} - ₹${course.fees_max}</p>
-      `).join("")}
-      <button onclick="closeModal()">Close</button>
+      <h2>Fee Structure</h2>
+      <ul class="fee-list">
+        ${data.map(f => `<li><strong>${f.name}</strong><br><small>₹${f.fees_min} - ₹${f.fees_max}</small></li>`).join('')}
+      </ul>
+      <button class="close-modal">Close</button>
     `;
 
-    modalBackdrop.style.display = "flex";
+    modalBackdrop.classList.add("show");
   });
 });
+
+// close
+modalBackdrop.addEventListener("click", (e) => {
+  if (e.target.id === "modal-backdrop" || e.target.classList.contains("close-modal")) {
+    modalBackdrop.classList.remove("show");
+  }
+});
+
+
 
 function closeModal() {
   modalBackdrop.style.display = "none";
